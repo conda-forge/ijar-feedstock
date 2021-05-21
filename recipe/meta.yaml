@@ -1,5 +1,5 @@
 {% set name = "ijar" %}
-{% set version = "4.0.0" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/bazelbuild/bazel/releases/download/{{ version }}/bazel-{{ version }}-dist.zip
-  sha256: d350f80e70654932db252db380d2ec0144a00e86f8d9f2b4c799ffdb48e9cdd1
+  sha256: f377d755c96a50f6bd2f423562598d822f43356783330a0b780ad442864d6eeb
 
 build:
   number: 0
