@@ -6,18 +6,25 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/bazelbuild/bazel/releases/download/{{ version }}/bazel-{{ version }}-dist.zip
-  sha256: f377d755c96a50f6bd2f423562598d822f43356783330a0b780ad442864d6eeb
+  - url: https://github.com/bazelbuild/bazel/releases/download/{{ version }}/bazel-{{ version }}-dist.zip
+    sha256: f377d755c96a50f6bd2f423562598d822f43356783330a0b780ad442864d6eeb
+  - url: https://github.com/bazelbuild/bazel/releases/download/4.1.0/bazel_nojdk-4.1.0-darwin-x86_64  # [build_platform == "osx-64"]
+    sha256: b1c660dfc0fd9d4a62ff83b998cb7268ce49b1a76d42afedbeec2230bc9e5def                          # [build_platform == "osx-64"]
+    fn: bazel                                                                                         # [build_platform == "osx-64"]
+  - url: https://github.com/bazelbuild/bazel/releases/download/4.1.0/bazel_nojdk-4.1.0-darwin-arm64   # [build_platform == "osx-arm64"]
+    sha256: c4134e8814d1212abae8ff55a04745468e016fec66ae4a267dad30de9843d65a                          # [build_platform == "osx-arm64"]
+    fn: bazel                                                                                         # [build_platform == "osx-arm64"]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not osx]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - bazel
+    - bazel-toolchain
+    - openjdk
 
 test:
   commands:
