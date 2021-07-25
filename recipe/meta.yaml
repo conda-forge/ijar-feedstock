@@ -14,10 +14,13 @@ source:
   - url: https://github.com/bazelbuild/bazel/releases/download/4.1.0/bazel_nojdk-4.1.0-darwin-arm64   # [build_platform == "osx-arm64"]
     sha256: c4134e8814d1212abae8ff55a04745468e016fec66ae4a267dad30de9843d65a                          # [build_platform == "osx-arm64"]
     fn: bazel                                                                                         # [build_platform == "osx-arm64"]
+  - url: https://github.com/bazelbuild/bazel/releases/download/4.1.0/bazel_nojdk-4.1.0-linux-x86_64   # [build_platform == "linux-64"]
+    sha256: 6976f8b48400fe1080f1ad6ac4bf043e39d5548f3a0b4788a6963a2abc2c120d                          # [build_platform == "linux-64"]
+    fn: bazel                                                                                         # [build_platform == "linux-64"]
 
 build:
   number: 1
-  skip: true  # [not osx]
+  skip: true  # [win]
 
 requirements:
   build:
