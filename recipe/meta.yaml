@@ -1,5 +1,5 @@
 {% set name = "ijar" %}
-{% set version = "4.1.0" %}
+{% set version = "4.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,19 +7,19 @@ package:
 
 source:
   - url: https://github.com/bazelbuild/bazel/releases/download/{{ version }}/bazel-{{ version }}-dist.zip
-    sha256: f377d755c96a50f6bd2f423562598d822f43356783330a0b780ad442864d6eeb
-  - url: https://github.com/bazelbuild/bazel/releases/download/4.1.0/bazel_nojdk-4.1.0-darwin-x86_64  # [build_platform == "osx-64"]
-    sha256: b1c660dfc0fd9d4a62ff83b998cb7268ce49b1a76d42afedbeec2230bc9e5def                          # [build_platform == "osx-64"]
-    fn: bazel                                                                                         # [build_platform == "osx-64"]
-  - url: https://github.com/bazelbuild/bazel/releases/download/4.1.0/bazel_nojdk-4.1.0-darwin-arm64   # [build_platform == "osx-arm64"]
-    sha256: c4134e8814d1212abae8ff55a04745468e016fec66ae4a267dad30de9843d65a                          # [build_platform == "osx-arm64"]
-    fn: bazel                                                                                         # [build_platform == "osx-arm64"]
-  - url: https://github.com/bazelbuild/bazel/releases/download/4.1.0/bazel_nojdk-4.1.0-linux-x86_64   # [build_platform == "linux-64"]
-    sha256: 6976f8b48400fe1080f1ad6ac4bf043e39d5548f3a0b4788a6963a2abc2c120d                          # [build_platform == "linux-64"]
-    fn: bazel                                                                                         # [build_platform == "linux-64"]
+    sha256: 74814b63920aaee47dbbbee7082e5c4317e4eebaf07e03c5fb5626e1716f1034
+  - url: https://github.com/bazelbuild/bazel/releases/download/{{ version }}/bazel_nojdk-{{ version }}-darwin-x86_64  # [build_platform == "osx-64"]
+    sha256: 98045f0adbe60f0d8bd42db67c08fcb7dc0f44e97c75e22b6f5e40a8c361d5b3  # [build_platform == "osx-64"]
+    fn: bazel  # [build_platform == "osx-64"]
+  - url: https://github.com/bazelbuild/bazel/releases/download/{{ version }}/bazel_nojdk-{{ version }}-darwin-arm64  # [build_platform == "osx-arm64"]
+    sha256: 716726e467b166418a0aa353909c7a65b20179e95a26b74a5d69d7170c20cf5a  # [build_platform == "osx-arm64"]
+    fn: bazel  # [build_platform == "osx-arm64"]
+  - url: https://github.com/bazelbuild/bazel/releases/download/{{ version }}/bazel_nojdk-{{ version }}-linux-x86_64  # [build_platform == "linux-64"]
+    sha256: 50eb27632c59f526fdadcc21400171204b47f91362675aab2c11a5c02ecc2e29  # [build_platform == "linux-64"]
+    fn: bazel  # [build_platform == "linux-64"]
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
