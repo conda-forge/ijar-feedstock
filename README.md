@@ -1,11 +1,11 @@
-About ijar
-==========
+About ijar-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ijar-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/bazelbuild/bazel/tree/master/third_party/ijar
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ijar-feedstock/blob/main/LICENSE.txt)
 
 Summary: A tool for generating interface .jars from normal .jars
 
@@ -190,5 +190,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@h-vetinari](https://github.com/h-vetinari/)
 * [@xhochy](https://github.com/xhochy/)
 
