@@ -1,5 +1,5 @@
 {% set name = "ijar" %}
-{% set version = "6.2.1" %}
+{% set version = "6.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,15 +7,15 @@ package:
 
 source:
   - url: https://github.com/bazelbuild/bazel/releases/download/{{ version }}/bazel-{{ version }}-dist.zip
-    sha256: 4cf4d264bff388ee0012735728630d23832d3c9d021383b2fadceadb0775dd6b
+    sha256: 902198981b1d26112fc05913e79f1b3e9772c3f95594caf85619d041ba06ede0
   - url: https://github.com/bazelbuild/bazel/releases/download/{{ version }}/bazel_nojdk-{{ version }}-darwin-x86_64  # [build_platform == "osx-64"]
-    sha256: ef6f0be3fa6e44e475b98828774ae6e52c956a1b96be48f9cd2f1567c4f53e56  # [build_platform == "osx-64"]
+    sha256: 9ad07d49066097a5b974896c09a36026bfc61812ced6b4e4b683bdbaa64fc11a  # [build_platform == "osx-64"]
     fn: bazel  # [build_platform == "osx-64"]
   - url: https://github.com/bazelbuild/bazel/releases/download/{{ version }}/bazel_nojdk-{{ version }}-darwin-arm64  # [build_platform == "osx-arm64"]
-    sha256: e3639d541515e370eaba215f80ebe1f96a4f10c92fa77bc9f15b7b6c5b24f66d  # [build_platform == "osx-arm64"]
+    sha256: 4c4987e187caaf21cf69a72a691bb7f5d3774b5f4c30995555327e4ee1522797  # [build_platform == "osx-arm64"]
     fn: bazel  # [build_platform == "osx-arm64"]
   - url: https://github.com/bazelbuild/bazel/releases/download/{{ version }}/bazel_nojdk-{{ version }}-linux-x86_64  # [build_platform == "linux-64"]
-    sha256: c83e3e49d4be7f15f594bb1f5b7531381ad7d1fcb53fb9f97d611664efe0d84e  # [build_platform == "linux-64"]
+    sha256: 92becce97ca25fbeb94ec16292586d1fb99b53d22ba50d5d87f8f97bf27449b5  # [build_platform == "linux-64"]
     fn: bazel  # [build_platform == "linux-64"]
 
 build:
