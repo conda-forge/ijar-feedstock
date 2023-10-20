@@ -28,6 +28,7 @@ requirements:
     - {{ compiler('cxx') }}
     - bazel-toolchain
     - openjdk
+    - sed
   run:
     - __osx >=10.13  # [osx and x86_64]
 
