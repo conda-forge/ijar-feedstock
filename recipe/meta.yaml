@@ -1,4 +1,4 @@
-{% set version = "6.5.0" %}
+{% set version = "7.2.1" %}
 
 {% set base_url = "https://github.com/bazelbuild/bazel/releases/download" %}
 
@@ -8,14 +8,17 @@ package:
 
 source:
   - url: {{ base_url }}/{{ version }}/bazel-{{ version }}-dist.zip
-    sha256: fc89da919415289f29e4ff18a5e01270ece9a6fe83cb60967218bac4a3bb3ed2
+    sha256: dfd823f52fe31328e9e63c27684168b1ab855212b84034c9cd8ccfc7b9af5e0d
 
-  - url: {{ base_url }}/{{ version }}/bazel_nojdk-{{ version }}-darwin-x86_64   # [build_platform == "osx-64"]
-    sha256: ccc67fa48a6444818a5b85e8174c89ca2630df60c1e2327714d944035a240fc9    # [build_platform == "osx-64"]
-    fn: bazel                                                                   # [build_platform == "osx-64"]
-  - url: {{ base_url }}/{{ version }}/bazel_nojdk-{{ version }}-linux-x86_64    # [build_platform == "linux-64"]
-    sha256: 218ce0aed544d29084f4d9ff98f01bc784b90fe4c79dab63fa990dc68e66eaa9    # [build_platform == "linux-64"]
-    fn: bazel                                                                   # [build_platform == "linux-64"]
+  - url: {{ base_url }}/{{ version }}/bazel_nojdk-{{ version }}-darwin-x86_64  # [build_platform == "osx-64"]
+    sha256: ba0a10ecbdaa70bf348bfdbad2fbcf0ba926a5ee07b613f6656046a1d3f60e07  # [build_platform == "osx-64"]
+    fn: bazel  # [build_platform == "osx-64"]
+  - url: {{ base_url }}/{{ version }}/bazel_nojdk-{{ version }}-darwin-arm64    # [build_platform == "osx-arm64"]
+    sha256: ef15ff2c9ca3cbf2b09dcc88ea6d7d89575cfd6904e560d7691831a1d7daaf82    # [build_platform == "osx-arm64"]
+    fn: bazel                                                                   # [build_platform == "osx-arm64"]
+  - url: {{ base_url }}/{{ version }}/bazel_nojdk-{{ version }}-linux-x86_64  # [build_platform == "linux-64"]
+    sha256: 1c7a167ad2c45374afb19f60093465f58f9209a5142d53d63bc4aadb567323fa  # [build_platform == "linux-64"]
+    fn: bazel  # [build_platform == "linux-64"]
 
 build:
   number: 0
@@ -26,7 +29,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
-    - bazel-toolchain
+    - bazel-toolchain >=0.2.0
     - openjdk
     - sed
 
