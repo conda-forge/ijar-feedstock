@@ -190,5 +190,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@conda-forge/bazel](https://github.com/orgs/conda-forge/teams/bazel/)
 * [@xhochy](https://github.com/xhochy/)
 
