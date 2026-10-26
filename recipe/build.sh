@@ -21,6 +21,7 @@ pushd third_party/ijar
 	--extra_toolchains=//bazel_toolchain:cc_cf_host_toolchain \
 	--platforms=//bazel_toolchain:target_platform \
 	--host_platform=//bazel_toolchain:build_platform \
+	--repo_contents_cache= \
 	--cpu=${TARGET_CPU} \
 	zipper ijar
 mkdir -p $PREFIX/bin
