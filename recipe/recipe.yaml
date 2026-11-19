@@ -32,7 +32,7 @@ requirements:
     - ${{ stdlib('c') }}
     - ${{ compiler('cxx') }}
     - bazel-toolchain >=0.5.0
-    - openjdk
+    - openjdk <26
     - sed
 
 tests:
